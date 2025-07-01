@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaijaLearn - Exam Preparation Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="NaijaLearn Logo">
+            <span>NaijaLearn</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#practice">Practice</a></li>
+            <li><a href="#mock">Mock Exams</a></li>
+            <li><a href="#progress">My Progress</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn login-btn">Login</button>
+            <button class="btn signup-btn">Sign Up</button>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Excel in Your SSCE, JAMB & POST UTME Exams</h1>
+            <p>Access comprehensive study materials, practice questions, and mock exams tailored for Nigerian students.</p>
+            <div class="hero-buttons">
+                <button class="btn primary-btn">Get Started</button>
+                <button class="btn secondary-btn">Explore Subjects</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="hero-image.png" alt="Students studying">
+        </div>
+    </section>
+
+    <!-- Exam Types Section -->
+    <section class="exam-types">
+        <h2>We Cover All Major Exams</h2>
+        <div class="exam-cards">
+            <div class="exam-card">
+                <div class="exam-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>SSCE</h3>
+                <p>WAEC, NECO, and NABTEB preparation with past questions and marking schemes.</p>
+            </div>
+            <div class="exam-card">
+                <div class="exam-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>JAMB</h3>
+                <p>Full UTME syllabus coverage with CBT practice tests and time management strategies.</p>
+            </div>
+            <div class="exam-card">
+                <div class="exam-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>POST UTME</h3>
+                <p>University-specific preparation materials for various institutions across Nigeria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="subjects" id="subjects">
+        <h2>Popular Subjects</h2>
+        <div class="subject-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="science">Science</button>
+            <button class="filter-btn" data-filter="arts">Arts</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+        </div>
+        <div class="subject-cards">
+            <!-- These will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section class="practice" id="practice">
+        <div class="practice-content">
+            <h2>Practice with Past Questions</h2>
+            <p>Access thousands of past questions from WAEC, NECO, JAMB and university POST UTME exams with detailed solutions.</p>
+            <div class="practice-stats">
+                <div class="stat">
+                    <span class="number">10,000+</span>
+                    <span class="label">Past Questions</span>
+                </div>
+                <div class="stat">
+                    <span class="number">25+</span>
+                    <span class="label">Years Covered</span>
+                </div>
+                <div class="stat">
+                    <span class="number">100%</span>
+                    <span class="label">Syllabus Coverage</span>
+                </div>
+            </div>
+            <button class="btn primary-btn">Start Practicing</button>
+        </div>
+        <div class="practice-image">
+            <img src="practice-image.png" alt="Practice questions">
+        </div>
+    </section>
+
+    <!-- Mock Exam Section -->
+    <section class="mock-exam" id="mock">
+        <h2>Simulate Real Exam Conditions</h2>
+        <p>Take timed mock exams that mimic the actual JAMB CBT interface and other exam formats.</p>
+        <div class="mock-features">
+            <div class="feature">
+                <i class="fas fa-stopwatch"></i>
+                <h4>Timed Tests</h4>
+                <p>Practice with the same time constraints as real exams.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-chart-bar"></i>
+                <h4>Performance Analysis</h4>
+                <p>Get detailed breakdown of your strengths and weaknesses.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-laptop"></i>
+                <h4>CBT Interface</h4>
+                <p>Familiarize yourself with the computer-based test format.</p>
+            </div>
+        </div>
+        <button class="btn primary-btn">Take a Mock Exam</button>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <p>"NaijaLearn helped me score 320 in my JAMB. The mock exams were exactly like the real thing!"</p>
+                <div class="student">
+                    <img src="student1.jpg" alt="Amina">
+                    <span>Amina, UNILAG</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>"I had 7 A1s in my WAEC thanks to the comprehensive study materials and practice questions."</p>
+                <div class="student">
+                    <img src="student2.jpg" alt="Chike">
+                    <span>Chike, UI</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>"The POST UTME preparation was tailored to my chosen university. I got admitted on my first try!"</p>
+                <div class="student">
+                    <img src="student3.jpg" alt="Bola">
+                    <span>Bola, OAU</span>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Ready to Excel in Your Exams?</h2>
+        <p>Join thousands of Nigerian students who are achieving academic success with NaijaLearn.</p>
+        <button class="btn primary-btn">Start Learning Now</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NaijaLearn</h4>
+                <p>Your comprehensive online learning platform for SSCE, JAMB and POST UTME preparation.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Subjects</a></li>
+                    <li><a href="#">Practice</a></li>
+                    <li><a href="#">Mock Exams</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get exam tips and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 NaijaLearn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn primary-btn">Login</button>
+            </form>
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+            <div class="social-login">
+                <button class="btn social-btn google">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <button class="btn social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Continue with Facebook
+                </button>
+            </div>
+            <p class="auth-switch">Don't have an account? <a href="#" id="switch-to-signup">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create Your Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-exam">Preparing for:</label>
+                    <select id="signup-exam" required>
+                        <option value="">Select Exam</option>
+                        <option value="SSCE">SSCE (WAEC/NECO)</option>
+                        <option value="JAMB">JAMB</option>
+                        <option value="POST-UTME">POST UTME</option>
+                        <option value="ALL">All Exams</option>
+                    </select>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" required> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn primary-btn">Create Account</button>
+            </form>
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+            <div class="social-login">
+                <button class="btn social-btn google">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <button class="btn social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Continue with Facebook
+                </button>
+            </div>
+            <p class="auth-switch">Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
