@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const authButtons = document.querySelector('.auth-buttons');
     
     mobileMenuBtn.addEventListener('click', function() {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        authButtons.style.display = authButtons.style.display === 'flex' ? 'none' : 'flex';
+        navLinks.classList.toggle('active');
+        authButtons.classList.toggle('active');
     });
 
     // Modal Handling
@@ -58,58 +58,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Subject Filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const subjectCardsContainer = document.querySelector('.subject-cards');
+    const subjectCards = document.querySelectorAll('.subject-card');
     
-    // Sample subject data (in a real app, this would come from an API)
-    const subjects = [
-        { id: 1, name: 'Mathematics', category: 'science', image: 'math.jpg', questions: 1250, lessons: 45 },
-        { id: 2, name: 'English Language', category: 'arts', image: 'english.jpg', questions: 980, lessons: 32 },
-        { id: 3, name: 'Physics', category: 'science', image: 'physics.jpg', questions: 870, lessons: 38 },
-        { id: 4, name: 'Chemistry', category: 'science', image: 'chemistry.jpg', questions: 920, lessons: 40 },
-        { id: 5, name: 'Biology', category: 'science', image: 'biology.jpg', questions: 850, lessons: 36 },
-        { id: 6, name: 'Economics', category: 'commercial', image: 'economics.jpg', questions: 760, lessons: 28 },
-        { id: 7, name: 'Government', category: 'arts', image: 'government.jpg', questions: 680, lessons: 25 },
-        { id: 8, name: 'Literature in English', category: 'arts', image: 'literature.jpg', questions: 540, lessons: 20 },
-        { id: 9, name: 'Financial Accounting', category: 'commercial', image: 'accounting.jpg', questions: 620, lessons: 22 },
-        { id: 10, name: 'Commerce', category: 'commercial', image: 'commerce.jpg', questions: 580, lessons: 18 },
-    ];
-
-    function renderSubjects(filter = 'all') {
-        subjectCardsContainer.innerHTML = '';
-        
-        const filteredSubjects = filter === 'all' 
-            ? subjects 
-            : subjects.filter(subject => subject.category === filter);
-        
-        filteredSubjects.forEach(subject => {
-            const card = document.createElement('div');
-            card.className = 'subject-card';
-            card.innerHTML = `
-                <img src="images/${subject.image}" alt="${subject.name}">
-                <div class="subject-info">
-                    <h3>${subject.name}</h3>
-                    <p>Comprehensive coverage of ${subject.name} syllabus with detailed explanations.</p>
-                    <div class="subject-meta">
-                        <span><i class="fas fa-question-circle"></i> ${subject.questions} Questions</span>
-                        <span><i class="fas fa-video"></i> ${subject.lessons} Lessons</span>
-                    </div>
-                </div>
-            `;
-            subjectCardsContainer.appendChild(card);
-        });
-    }
-
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
+            // Remove active class from all buttons
             filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
             this.classList.add('active');
+            
             const filter = this.dataset.filter;
-            renderSubjects(filter);
+            
+            // Filter subjects
+            subjectCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
     });
-
-    // Initialize with all subjects
-    renderSubjects();
 
     // Testimonial Slider
     const testimonials = document.querySelectorAll('.testimonial');
@@ -158,8 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu if open
-                navLinks.style.display = 'none';
-                authButtons.style.display = 'none';
+                navLinks.classList.remove('active');
+                authButtons.classList.remove('active');
             }
         });
     });
