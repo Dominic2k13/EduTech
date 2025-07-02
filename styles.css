@@ -179,15 +179,13 @@ img {
     left: 0;
 }
 
-/* Home link specific animation */
-.nav-links li:first-child a::before {
-    background-color: var(--accent-color);
-}
+
 
 .auth-buttons {
     display: flex;
     gap: 1rem;
 }
+
 
 .login-btn {
     background-color: transparent;
@@ -195,9 +193,21 @@ img {
     border: 1px solid var(--primary-color);
 }
 
+.login-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+    
+}
+
 .signup-btn {
     background-color: var(--primary-color);
     color: var(--white);
+}
+
+.signup-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .mobile-menu-btn {
